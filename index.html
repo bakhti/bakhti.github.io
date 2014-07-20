@@ -36,36 +36,28 @@
         </div>
 
         <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+<a name="reading_emacs_documentation_on_a_table" class="anchor" href="#reading_emacs_documentation_on_a_tablet"><span class="octicon octicon-link"></span></a>Reading emacs documentation on a tablet.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>Sometimes, when I'm in a middle of some important task, and I need to check something in documentation, I find something interesting I didn't know about before, so I catch myself thinking that I should go through this part from the start to the end later. Then, on my way to anywhere, I think that it would be good to have that part of documentation on my tablet.</p>
+<p>I knew there is a way to export emacs info documentation to e-book format, I just wasn't sure how to do that. It turned out to be a pretty simpe task, so here is how I do it now.</p>
+<p>Since we need a source (texi) of info files, lets get a source of emacs. I use Ubuntu with <code>ppa:ubuntu-elisp/ppa</code> for emacs, so getting its source files is easy as:</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
+<pre><code>$ cd ~/src
+$ apt-get source emacs-snapshot
+$ cd emacs-snapshot-201407022054~ubuntu14.04.1/doc/misc
 </code></pre>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>Now I will export <code>eshell.texi</code> to <code>html</code>:</p>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<pre><code>$ texi2html eshell.texi</code></pre>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+And to get that into <code>epub</code> format I will use <code>ebook-convert</code> script that comes with <a href="http://calibre-ebook.com">Calibre</a>:
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<pre><code>$ ebook-convert eshell.html .epub --authors "John Wiegley & Aidan Gauland"</pre></code>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>This tool has many features and different options described in online <a href="http://manual.calibre-ebook.com/conversion.html">Manual</a> page.</p>
+<p>So now I have <code>eshell.epub</code> I can put into my tablet and read in any e-book reader.</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
       </section>
 
     </div>
