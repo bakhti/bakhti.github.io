@@ -1,67 +1,10 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>bakhti.github.io by bakhti</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/respond.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="stylesheets/ie.css">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
+    <meta http-equiv="REFRESH" content="0;url=https://github.com/bakhti/bakhti.github.io/wiki">
   </head>
   <body>
-      <div id="header">
-        <nav>
-          <li class="fork"><a href="https://github.com/bakhti">View On GitHub</a></li>
-        </nav>
-      </div><!-- end header -->
-
-    <div class="wrapper">
-
-      <section>
-        <div id="title">
-          <h1>bakhti.github.io</h1>
-          <p></p>
-          <hr>
-          <span class="credits left">Project maintained by <a href="https://github.com/bakhti">bakhti</a></span>
-          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
-        </div>
-
-        <h3>
-<a name="reading_emacs_documentation_on_a_table" class="anchor" href="#reading_emacs_documentation_on_a_tablet"><span class="octicon octicon-link"></span></a>Reading emacs documentation on a tablet.</h3>
-
-<p>Sometimes, when I'm in a middle of some important task, and I need to check something in documentation, I find something interesting I didn't know about before, so I catch myself thinking that I should go through this part from the start to the end later. Then, on my way to anywhere, I think that it would be good to have that part of documentation on my tablet.</p>
-<p>I knew there is a way to export emacs info documentation to e-book format, I just wasn't sure how to do that. It turned out to be a pretty simpe task, so here is how I do it now.</p>
-<p>Since we need a source (texi) of info files, lets get a source of emacs. I use Ubuntu with <code>ppa:ubuntu-elisp/ppa</code> for emacs, so getting its source files is easy as:</p>
-
-<pre><code>$ cd ~/src
-$ apt-get source emacs-snapshot
-$ cd emacs-snapshot-201407022054~ubuntu14.04.1/doc/misc
-</code></pre>
-
-<p>Now I will export <code>eshell.texi</code> to <code>html</code>:</p>
-
-<pre><code>$ texi2html eshell.texi</code></pre>
-
-<p>And to get that into <code>epub</code> format I will use <code>ebook-convert</code> script that comes with <a href="http://calibre-ebook.com">Calibre</a>:</p>
-
-<pre><code>$ ebook-convert eshell.html .epub --authors "John Wiegley & Aidan Gauland"</pre></code>
-
-<p>This tool has many features and different options described in online <a href="http://manual.calibre-ebook.com/conversion.html">Manual</a> page.</p>
-<p>So now I have <code>eshell.epub</code> I can put into my tablet and read in any e-book reader.</p>
-
-      </section>
-
-    </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+    Please wait while you're redirected to <a href="https://github.com/bakhti/bakhti.github.io/wiki">my wiki</a>.
   </body>
 </html>
